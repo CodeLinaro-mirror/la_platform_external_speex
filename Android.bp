@@ -21,7 +21,7 @@ cc_library_shared {
     vndk: {
         enabled: true,
     },
-
+    double_loadable: true,
     arch: {
         arm: {
             instruction_set: "arm",
@@ -52,10 +52,5 @@ cc_library_shared {
     sanitize: {
         integer_overflow: true,
         misc_undefined: ["bounds"],
-        diag: {
-            integer_overflow: true,
-            misc_undefined: ["bounds"],
-            no_recover: ["bounds", "integer"],
-        },
     },
 }
